@@ -3,7 +3,10 @@ from discord.ext import commands
 
 intents = discord.Intents.default() # THANK YOU PAUL
 bot = commands.Bot(command_prefix='.', intents=intents, help_command=None)
-TOKEN =  "MTAyNDcwMjAxNTI2NTMyMDk3MA.GazAOi.Stw526c2dHuGFDxCWQBbqhuAKaQdNTqzHLjG0A"
+
+with open("token.txt", "r") as f:
+    TOKEN =  f.readline()
+
 
 
 # Basically looks for a specified user, joins the vc they are in, and rickrolls them
